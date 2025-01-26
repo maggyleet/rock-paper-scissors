@@ -1,0 +1,122 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #331;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+h2{
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    color: rgb(10, 27, 40);
+    letter-spacing: 2px;
+}
+
+/* Container for buttons and results */
+#game-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Buttons container */
+button {
+    background-color: rgb(56, 160, 240);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover and active button effects */
+button:hover {
+    background-color: #36bcc3;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #36888d;
+    transform: translateY(2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for result text */
+#result {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+    font-weight: 500;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+}
+
+#score {
+    font-size: 1.4rem;
+    color: #555;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+}
+
+/* For the winner announcement */
+#score,
+#result {
+    display: inline-block;
+}
+
+/* Flexbox adjustments for small screen devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    #result {
+        font-size: 1.5rem;
+    }
+
+    #score {
+        font-size: 1.2rem;
+    }
+}

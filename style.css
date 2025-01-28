@@ -45,13 +45,13 @@ button {
 }
 
 button:hover {
-    background-color: #e43f5a; /* Darker red for hover */
+    background-color: #03c04a; /* Darker red for hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-    background-color: #a83248; /* Even darker red for active state */
+    background-color: #03c04a; /* Even darker red for active state */
     transform: translateY(2px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }

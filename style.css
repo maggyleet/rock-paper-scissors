@@ -66,6 +66,18 @@ button:active {
 
 #score {
     font-size: 1.2rem;
+    color: black; /* Light text for score */
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: #F8D7DA; /* Dark navy for score background */
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#choose {
+    font-size: 1.2rem;
     color: #f8f8f8; /* Light text for score */
     margin-top: 10px;
     font-weight: 600;

@@ -1,6 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
 
+document.getElementById("choose").textContent = `Player: - | Computer: -`;
+
 function getComputerChoice() {
   const choices = ["Rock", "Paper", "Scissors"];
   return choices[Math.floor(Math.random() * 3)];
@@ -9,7 +11,8 @@ function getComputerChoice() {
 function playRound(playerSelection) {
   const computerSelection = getComputerChoice();
   let result = "";
-
+  let choose = "";
+  choose = `Player: ${playerSelection} | Computer: ${computerSelection}`;
   if (playerSelection === computerSelection) {
     result = `It's a tie! Both chose ${playerSelection}.`;
   } else if (
@@ -24,14 +27,15 @@ function playRound(playerSelection) {
     result = `You lose! ${computerSelection} beats ${playerSelection}.`;
   }
 
-  updateScore(result);
+  updateScore(result, choose);
 }
 
-function updateScore(result) {
+function updateScore(result, choose) {
   const resultDiv = document.getElementById("result");
   const scoreDiv = document.getElementById("score");
-
+  const chooseDiv = document.getElementById("choose");
   resultDiv.textContent = result;
+  chooseDiv.textContent = choose;
   scoreDiv.textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
 
   if (playerScore === 5 || computerScore === 5) {
@@ -66,11 +70,13 @@ function resetGame() {
 
   const resultDiv = document.getElementById("result");
   const scoreDiv = document.getElementById("score");
+  const chooseDiv = document.getElementById("choose");
   const playAgainButton = document.querySelector(".play-again");
   const buttons = document.querySelectorAll("button");
 
   resultDiv.textContent = "";
-  scoreDiv.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
+  chooseDiv.textContent = `Player: - | Computer: -`;
+  scoreDiv.textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
   playAgainButton.remove();
 
   buttons.forEach((button) => (button.disabled = false));
